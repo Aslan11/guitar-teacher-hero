@@ -117,6 +117,55 @@ Learn guitar by generating tablature through an interactive multi-agent workflow
 - **Writer Agent**: Produces markdown guitar tabs
 - **PDF Generator Agent**: Converts markdown to PDF
 
+### Agent Flow Diagram
+
+```
+        User Query
+             |
+             v
+       +--------------+
+       | Triage Agent |
+       +------+-------+
+              |
+   +----------+-----------+
+   |                      |
+   | clarifications needed|
+   v                      |
+ +---------------+        |
+ | Clarifying    |        |
+ |    Agent      |        |
+ +-------+-------+        |
+         |                |
+   (user answers)         |
+         |                |
+         +----------------+
+              |
+              v
+       +--------------+
+       | Instruction  |
+       |    Agent     |
+       +------+-------+
+              |
+       +--------------+
+       | Planner Agent|
+       +------+-------+
+              |
+       +--------------+
+       | Search Agent |
+       +------+-------+
+              |
+       +--------------+
+       | Writer Agent |
+       +------+-------+
+              |
+       +--------------+
+       | PDF Generator|
+       |    Agent     |
+       +------+-------+
+              |
+       Markdown / PDF
+```
+
 **To run:**
 
 ```bash
