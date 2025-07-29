@@ -1,4 +1,4 @@
-# Interactive Guitar Tab Demo
+![Guitar Teacher Hero](./guitar-teacher-hero.png)
 
 Based on [openai-agents-demos](https://github.com/temporal-community/openai-agents-demos)
 
